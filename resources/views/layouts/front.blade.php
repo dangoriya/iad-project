@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'IAD') }}</title>
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -29,9 +29,9 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <!-- <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'IAD') }}
+                    </a> -->
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -48,8 +48,19 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <img class="swiss" src="{{url('img/logo.png')}}" style="margin-bottom: 10px;">
+                </div>
+            </div>
+        </div>
 
         @yield('content')
+        <div class="links">
+            <h3 class="text text-center">Internal Audit System</h3>
+            <p class="text text-center text-warning">Powered by IT Department</p>
+        </div>
     </div>
 </body>
 </html>
